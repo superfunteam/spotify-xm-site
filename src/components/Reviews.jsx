@@ -128,7 +128,7 @@ function Review({ title, body, author, rating, className, ...props }) {
   return (
     <figure
       className={clsx(
-        'animate-fade-in rounded-3xl bg-white p-6 opacity-0 shadow-md shadow-gray-900/5',
+                        'animate-fade-in rounded-3xl bg-gray-900 p-6 opacity-0 shadow-md shadow-gray-950/50',
         className,
       )}
       style={{ animationDelay }}
@@ -256,11 +256,11 @@ export function Reviews() {
       <Container>
         <h2
           id="reviews-title"
-          className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
+                        className="text-3xl font-medium tracking-tight text-cyan-400 sm:text-center"
         >
           Music lovers are discovering Spotify XM.
         </h2>
-        <p className="mt-2 text-lg text-gray-600 sm:text-center">
+                    <p className="mt-2 text-lg text-gray-300 sm:text-center">
           Thousands of people are enjoying free, unlimited music streaming 
           with custom stations and Bluetooth connectivity.
         </p>

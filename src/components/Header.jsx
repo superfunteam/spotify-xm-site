@@ -68,7 +68,7 @@ export function Header() {
               {({ open }) => (
                 <>
                   <PopoverButton
-                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-gray-900 p-2 hover:bg-gray-200/50 hover:stroke-gray-600 focus:not-data-focus:outline-hidden active:stroke-gray-900"
+                    className="relative z-10 -m-2 inline-flex items-center rounded-lg stroke-cyan-400 p-2 hover:bg-gray-800/50 hover:stroke-cyan-300 focus:not-data-focus:outline-hidden active:stroke-cyan-500"
                     aria-label="Toggle site navigation"
                   >
                     {({ open }) =>
@@ -100,7 +100,7 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pt-32 pb-6 shadow-2xl shadow-gray-900/20"
+                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-900 px-6 pt-32 pb-6 shadow-2xl shadow-gray-950/50"
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/#features">

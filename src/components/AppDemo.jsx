@@ -85,8 +85,8 @@ function Chart({
           <path d={`${path} V ${height + paddingY} H ${paddingX} Z`} />
         </clipPath>
         <linearGradient id={`${id}-gradient`} x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0%" stopColor="#13B5C8" />
-          <stop offset="100%" stopColor="#13B5C8" stopOpacity="0" />
+                      <stop offset="0%" stopColor="#39ff14" />
+            <stop offset="100%" stopColor="#39ff14" stopOpacity="0" />
         </linearGradient>
       </defs>
       {[...Array(gridLines - 1).keys()].map((index) => (
@@ -180,7 +180,7 @@ export function AppDemo() {
               />
             </svg>
           </div>
-          <div className="mt-3 border-t border-gray-200 pt-5">
+                      <div className="mt-3 border-t border-gray-700 pt-5">
             <div className="flex items-baseline gap-2">
               <div className="text-2xl tracking-tight text-gray-900 tabular-nums">
                 {activeValue.toFixed(2)}
@@ -207,7 +207,7 @@ export function AppDemo() {
               <div>1Y</div>
               <div>5Y</div>
             </div>
-            <div className="mt-3 rounded-lg bg-gray-50 ring-1 ring-black/5 ring-inset">
+            <div className="mt-3 rounded-lg bg-gray-800 ring-1 ring-gray-700 ring-inset">
               <Chart
                 width={286}
                 height={208}
@@ -217,10 +217,10 @@ export function AppDemo() {
                 onChangeActivePointIndex={setActivePointIndex}
               />
             </div>
-            <div className="mt-4 rounded-lg bg-cyan-500 px-4 py-2 text-center text-sm font-semibold text-white">
+            <div className="mt-4 rounded-lg bg-cyan-500 px-4 py-2 text-center text-sm font-semibold text-gray-950">
               Trade
             </div>
-            <div className="mt-3 divide-y divide-gray-100 text-sm">
+            <div className="mt-3 divide-y divide-gray-700 text-sm">
               <div className="flex justify-between py-1">
                 <div className="text-gray-500">Open</div>
                 <div className="font-medium text-gray-900">6,387.55</div>
