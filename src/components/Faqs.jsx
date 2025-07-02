@@ -3,53 +3,53 @@ import { Container } from '@/components/Container'
 const faqs = [
   [
     {
-      question: 'How do I know the tips are good?',
+      question: 'Is Spotify XM really completely free?',
       answer:
-        'Our whole business depends on our tips being good, so it’s in our best interest that they are. The results of our customers speak for themselves, just trust us.',
+        'Yes! Spotify XM is 100% free with no ads, no subscription fees, and no hidden costs. We believe music should be accessible to everyone.',
     },
     {
-      question: 'Isn’t this insider trading?',
+      question: 'How is this different from other music streaming apps?',
       answer:
-        'Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Pocket brings you insider trading tips from people you don’t even know.',
+        'Unlike traditional streaming services, Spotify XM is open-source, offers radio-style discovery, has no ads, requires no subscriptions, and focuses on custom station creation rather than algorithm-driven playlists.',
     },
     {
-      question: 'But isn’t insider trading illegal?',
+      question: 'What devices does Spotify XM work with?',
       answer:
-        'Here’s the thing: you’re the one doing the insider trading, not us. We’re just giving you the tips and some tools to make trades. We’re not doing anything wrong here.',
-    },
-  ],
-  [
-    {
-      question: 'Do the people giving you tips realize what they are doing?',
-      answer:
-        'Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us.',
-    },
-    {
-      question: 'Where is Pocket based?',
-      answer:
-        'Let’s just say it’s not somewhere where the SEC is going to find us.',
-    },
-    {
-      question: 'Is there any age limit to trading on Pocket?',
-      answer:
-        'For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog.',
+        'Spotify XM works with any device that supports Bluetooth - cars, headphones, speakers, smart TVs, and more. It\'s available on iOS and Android.',
     },
   ],
   [
     {
-      question: 'How did you get this on the App Store?',
+      question: 'How do custom stations work?',
       answer:
-        'Honestly we were surprised too, but eventually we found out that the app reviewer found the app so compelling they approved it just so they could use it themselves.',
+        'You can create stations based on artists, genres, or moods. Our system learns your preferences and plays similar music while discovering new artists that match your taste.',
     },
     {
-      question: 'How do I explain the money I withdraw from Pocket to the IRS?',
+      question: 'Can I contribute to the project?',
       answer:
-        'This feels like one-hundred percent a you problem. Pocket is not responsible in any way for your tax returns.',
+        'Absolutely! Spotify XM is open-source. You can contribute code, report bugs, suggest features, or help with documentation on our GitHub repository.',
     },
     {
-      question: 'How do I become an insider?',
+      question: 'How do you afford to keep this free?',
       answer:
-        'Contact us with some details about your industry and the type of access you have to apply for an insider account. Once approved, we’ll send you a guide on collecting insider information without being detected at work.',
+        'We rely on voluntary contributions from our community and sponsor support. The entire project is run by volunteers who believe in free access to music.',
+    },
+  ],
+  [
+    {
+      question: 'Will there be offline downloads?',
+      answer:
+        'Offline downloads are planned for a future release. We\'re working on implementing this feature while maintaining our commitment to free, open-source software.',
+    },
+    {
+      question: 'How is my privacy protected?',
+      answer:
+        'We don\'t track your listening habits for advertising. All data is stored locally on your device, and we have no third-party analytics or data sharing.',
+    },
+    {
+      question: 'Where can I get support?',
+      answer:
+        'Join our community Discord, check our GitHub discussions, or reach out through our support channels. Our community is very responsive and helpful.',
     },
   ],
 ]
@@ -72,10 +72,10 @@ export function Faqs() {
           <p className="mt-2 text-lg text-gray-600">
             If you have anything else you want to ask,{' '}
             <a
-              href="mailto:info@example.com"
+              href="https://github.com/your-username/spotify-xm/discussions"
               className="text-gray-900 underline"
             >
-              reach out to us
+              join our community discussions
             </a>
             .
           </p>

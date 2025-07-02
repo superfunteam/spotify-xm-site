@@ -4,39 +4,39 @@ import { Container } from '@/components/Container'
 
 const features = [
   {
-    name: 'Invest any amount',
+    name: 'Create unlimited stations',
     description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
+      'Build as many custom radio stations as you want based on your favorite artists, genres, or moods.',
     icon: DeviceArrowIcon,
   },
   {
-    name: 'Build a balanced portfolio',
+    name: 'High-quality audio',
     description:
-      'Invest in different industries to find the most opportunities to win huge.',
+      'Stream music at 320kbps quality for crystal-clear sound on any device.',
     icon: DeviceCardsIcon,
   },
   {
-    name: 'Trade in real-time',
+    name: 'Real-time discovery',
     description:
-      'Get insider tips on big stock moves and act on them within seconds.',
+      'Discover new artists and songs that match your taste as you listen.',
     icon: DeviceClockIcon,
   },
   {
-    name: 'Profit from your network',
+    name: 'Smart playlists',
     description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
+      'Our algorithm learns your preferences to create the perfect listening experience.',
     icon: DeviceListIcon,
   },
   {
-    name: 'Encrypted and anonymized',
+    name: 'Privacy focused',
     description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
+      'No data tracking, no ads, no analytics. Your music preferences stay private.',
     icon: DeviceLockIcon,
   },
   {
-    name: 'Portfolio tracking',
+    name: 'Cross-platform sync',
     description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
+      'Seamlessly switch between devices while maintaining your stations and preferences.',
     icon: DeviceChartIcon,
   },
 ]
@@ -51,10 +51,11 @@ function DeviceArrowIcon(props) {
         fill="#737373"
       />
       <path
-        d="M12 25l8-8m0 0h-6m6 0v6"
-        stroke="#171717"
+        d="M16 12v8m0 0l3-3m-3 3l-3-3"
+        stroke="#06b6d4"
         strokeWidth={2}
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
     </svg>
@@ -72,27 +73,11 @@ function DeviceCardsIcon(props) {
         d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
         fill="#737373"
       />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M9 13a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1v-2zm0 6a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H10a1 1 0 01-1-1v-2zm1 5a1 1 0 00-1 1v2a1 1 0 001 1h12a1 1 0 001-1v-2a1 1 0 00-1-1H10z"
-        fill={`url(#${id}-gradient)`}
-      />
-      <rect x={9} y={6} width={14} height={4} rx={1} fill="#171717" />
+      <circle cx={16} cy={12} r={3} fill="#06b6d4" />
+      <circle cx={16} cy={20} r={2} fill="#06b6d4" />
+      <circle cx={12} cy={16} r={1.5} fill="#06b6d4" />
+      <circle cx={20} cy={16} r={1.5} fill="#06b6d4" />
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <defs>
-        <linearGradient
-          id={`${id}-gradient`}
-          x1={16}
-          y1={12}
-          x2={16}
-          y2={28}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#737373" />
-          <stop offset={1} stopColor="#737373" stopOpacity={0} />
-        </linearGradient>
-      </defs>
     </svg>
   )
 }
@@ -111,7 +96,7 @@ function DeviceClockIcon(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M24 32a8 8 0 100-16 8 8 0 000 16zm1-8.414V19h-2v5.414l4 4L28.414 27 25 23.586z"
-        fill="#171717"
+        fill="#06b6d4"
       />
     </svg>
   )
@@ -126,12 +111,12 @@ function DeviceListIcon(props) {
         d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
         fill="#737373"
       />
-      <circle cx={11} cy={14} r={2} fill="#171717" />
-      <circle cx={11} cy={20} r={2} fill="#171717" />
-      <circle cx={11} cy={26} r={2} fill="#171717" />
+      <circle cx={11} cy={14} r={2} fill="#06b6d4" />
+      <circle cx={11} cy={20} r={2} fill="#06b6d4" />
+      <circle cx={11} cy={26} r={2} fill="#06b6d4" />
       <path
         d="M16 14h6M16 20h6M16 26h6"
-        stroke="#737373"
+        stroke="#06b6d4"
         strokeWidth={2}
         strokeLinecap="square"
       />
@@ -154,7 +139,7 @@ function DeviceLockIcon(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M18 19.5a3.5 3.5 0 117 0V22a2 2 0 012 2v6a2 2 0 01-2 2h-7a2 2 0 01-2-2v-6a2 2 0 012-2v-2.5zm2 2.5h3v-2.5a1.5 1.5 0 00-3 0V22z"
-        fill="#171717"
+        fill="#06b6d4"
       />
     </svg>
   )
@@ -170,17 +155,15 @@ function DeviceChartIcon(props) {
         fill="#737373"
       />
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M23 13.838V26a2 2 0 01-2 2H11a2 2 0 01-2-2V15.65l2.57 3.212a1 1 0 001.38.175L15.4 17.2a1 1 0 011.494.353l1.841 3.681c.399.797 1.562.714 1.843-.13L23 13.837z"
-        fill="#171717"
-      />
-      <path
-        d="M10 12h12"
-        stroke="#737373"
+        d="M10 20l3-3 3 3 6-6"
+        stroke="#06b6d4"
         strokeWidth={2}
-        strokeLinecap="square"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
+      <circle cx={13} cy={17} r={2} fill="#06b6d4" />
+      <circle cx={16} cy={20} r={2} fill="#06b6d4" />
+      <circle cx={22} cy={14} r={2} fill="#06b6d4" />
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
     </svg>
   )
@@ -190,17 +173,17 @@ export function SecondaryFeatures() {
   return (
     <section
       id="secondary-features"
-      aria-label="Features for building a portfolio"
+      aria-label="Features for music streaming"
       className="py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl sm:text-center">
           <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
+            Everything you need for the perfect listening experience.
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
+            Spotify XM combines the best of radio-style discovery with modern 
+            streaming technology, giving you unlimited music without the cost.
           </p>
         </div>
         <ul
