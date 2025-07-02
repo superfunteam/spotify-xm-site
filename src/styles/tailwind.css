@@ -41,17 +41,34 @@
   --radius-4xl: 2rem;
   --radius-5xl: 2.5rem;
 
-  --color-gray-50: oklch(0.985 0 0);
-  --color-gray-100: oklch(0.97 0 0);
-  --color-gray-200: oklch(0.922 0 0);
-  --color-gray-300: oklch(0.87 0 0);
-  --color-gray-400: oklch(0.708 0 0);
-  --color-gray-500: oklch(0.556 0 0);
-  --color-gray-600: oklch(0.439 0 0);
-  --color-gray-700: oklch(0.371 0 0);
-  --color-gray-800: oklch(0.269 0 0);
-  --color-gray-900: oklch(0.205 0 0);
-  --color-gray-950: oklch(0.145 0 0);
+  /* Dark green color palette */
+  --color-gray-50: oklch(0.95 0.05 140);   /* Very light dark green */
+  --color-gray-100: oklch(0.9 0.08 140);   /* Light dark green */
+  --color-gray-200: oklch(0.8 0.12 140);   /* Lighter dark green */
+  --color-gray-300: oklch(0.65 0.15 140);  /* Medium light dark green */
+  --color-gray-400: oklch(0.5 0.18 140);   /* Medium dark green */
+  --color-gray-500: oklch(0.4 0.2 140);    /* Dark green */
+  --color-gray-600: oklch(0.32 0.18 140);  /* Darker green */
+  --color-gray-700: oklch(0.26 0.16 140);  /* Very dark green */
+  --color-gray-800: oklch(0.20 0.14 140);  /* Extra dark green */
+  --color-gray-900: oklch(0.15 0.12 140);  /* Almost black green */
+  --color-gray-950: oklch(0.10 0.10 140);  /* Near black green */
+
+  /* Neon green accent colors */
+  --color-cyan-50: oklch(0.95 0.08 140);   /* Very light neon green */
+  --color-cyan-100: oklch(0.90 0.12 140);  /* Light neon green */
+  --color-cyan-200: oklch(0.85 0.20 140);  /* Lighter neon green */
+  --color-cyan-300: oklch(0.75 0.30 140);  /* Light medium neon green */
+  --color-cyan-400: oklch(0.70 0.35 140);  /* Medium neon green */
+  --color-cyan-500: oklch(0.65 0.40 140);  /* Neon green */
+  --color-cyan-600: oklch(0.60 0.38 140);  /* Darker neon green */
+  --color-cyan-700: oklch(0.50 0.35 140);  /* Dark neon green */
+  --color-cyan-800: oklch(0.40 0.30 140);  /* Extra dark neon green */
+  --color-cyan-900: oklch(0.30 0.25 140);  /* Very dark neon green */
+
+  /* Override white/black to fit the theme */
+  --color-white: oklch(0.08 0.05 140);     /* Dark green background */
+  --color-black: oklch(0.85 0.40 140);     /* Bright neon green */
 
   --font-sans: var(--font-inter);
 
@@ -79,5 +96,35 @@
     100% {
       transform: translateY(-50%);
     }
+  }
+}
+
+/* Global dark green theme styles */
+@layer base {
+  html {
+    @apply bg-gray-950 text-gray-50;
+  }
+  
+  body {
+    @apply bg-gray-950;
+  }
+  
+  /* Override default focus colors to neon green */
+  *:focus {
+    @apply outline-cyan-500;
+  }
+  
+  /* Make all links neon green by default */
+  a {
+    @apply text-cyan-400 hover:text-cyan-300;
+  }
+  
+  /* Override form elements to use dark green theme */
+  input, textarea, select {
+    @apply bg-gray-900 border-gray-700 text-gray-100 placeholder-gray-500;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    @apply border-cyan-500 ring-cyan-500;
   }
 }

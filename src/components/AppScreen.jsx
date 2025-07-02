@@ -59,7 +59,7 @@ export function AppScreen({ children, className, ...props }) {
 
 AppScreen.Header = forwardRef(function AppScreenHeader({ children }, ref) {
   return (
-    <div ref={ref} className="mt-6 px-4 text-white">
+          <div ref={ref} className="mt-6 px-4 text-cyan-400">
       {children}
     </div>
   )
@@ -67,7 +67,7 @@ AppScreen.Header = forwardRef(function AppScreenHeader({ children }, ref) {
 
 AppScreen.Title = forwardRef(function AppScreenTitle({ children }, ref) {
   return (
-    <div ref={ref} className="text-2xl text-white">
+          <div ref={ref} className="text-2xl text-cyan-400">
       {children}
     </div>
   )
@@ -88,7 +88,7 @@ AppScreen.Body = forwardRef(function AppScreenBody(
   return (
     <div
       ref={ref}
-      className={clsx('mt-6 flex-auto rounded-t-2xl bg-white', className)}
+              className={clsx('mt-6 flex-auto rounded-t-2xl bg-gray-900', className)}
     >
       {children}
     </div>

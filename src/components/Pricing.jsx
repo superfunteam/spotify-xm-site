@@ -110,13 +110,13 @@ function Plan({
     <section
       className={clsx(
         'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5',
-        featured ? 'order-first bg-gray-900 lg:order-none' : 'bg-white',
+                      featured ? 'order-first bg-gray-950 lg:order-none' : 'bg-gray-900',
       )}
     >
       <h3
         className={clsx(
           'flex items-center text-sm font-semibold',
-          featured ? 'text-white' : 'text-gray-900',
+          featured ? 'text-cyan-400' : 'text-cyan-500',
         )}
       >
         <Logomark className={clsx('h-6 w-6 flex-none', logomarkClassName)} />
@@ -125,7 +125,7 @@ function Plan({
       <p
         className={clsx(
           'relative mt-5 flex text-3xl tracking-tight',
-          featured ? 'text-white' : 'text-gray-900',
+          featured ? 'text-cyan-400' : 'text-cyan-500',
         )}
       >
         {price.Monthly === price.Annually ? (
@@ -178,7 +178,7 @@ function Plan({
               <CheckIcon
                 className={clsx(
                   'h-6 w-6 flex-none',
-                  featured ? 'text-white' : 'text-cyan-500',
+                                      featured ? 'text-cyan-300' : 'text-cyan-400',
                 )}
               />
               <span className="ml-4">{feature}</span>
@@ -205,17 +205,17 @@ export function Pricing() {
     <section
       id="pricing"
       aria-labelledby="pricing-title"
-      className="border-t border-gray-200 bg-gray-100 py-20 sm:py-32"
+      className="border-t border-gray-800 bg-gray-950 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="pricing-title"
-            className="text-3xl font-medium tracking-tight text-gray-900"
+            className="text-3xl font-medium tracking-tight text-cyan-400"
           >
             Free music streaming, always.
           </h2>
-          <p className="mt-2 text-lg text-gray-600">
+          <p className="mt-2 text-lg text-gray-300">
             No subscription fees, no ads, no limitations. Choose how you want 
             to support the open-source music streaming revolution.
           </p>

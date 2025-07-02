@@ -46,8 +46,8 @@ function BackgroundIllustration(props) {
             y2="1025"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#39ff14" />
+            <stop offset="1" stopColor="#39ff14" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -76,8 +76,8 @@ function BackgroundIllustration(props) {
             y2="913"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#06b6d4" />
-            <stop offset="1" stopColor="#06b6d4" stopOpacity="0" />
+            <stop stopColor="#39ff14" />
+            <stop offset="1" stopColor="#39ff14" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -115,10 +115,10 @@ export function Hero() {
       <Container>
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
           <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
-            <h1 className="text-4xl font-medium tracking-tight text-gray-900">
+            <h1 className="text-4xl font-medium tracking-tight text-cyan-400">
               Free radio streaming, unlimited music.
             </h1>
-            <p className="mt-6 text-lg text-gray-600">
+            <p className="mt-6 text-lg text-gray-300">
               Experience radio-style music streaming with custom stations, 
               Bluetooth connectivity, and no subscription fees. Completely free, 
               open-source, and always improving.
@@ -133,17 +133,17 @@ export function Hero() {
                 <span className="ml-2.5">View on GitHub</span>
               </Button>
             </div>
-            <div className="mt-6 flex items-center gap-x-4 text-sm text-gray-600">
+            <div className="mt-6 flex items-center gap-x-4 text-sm text-gray-400">
               <span className="flex items-center">
-                <span className="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
+                <span className="h-2 w-2 bg-cyan-400 rounded-full mr-2"></span>
                 Beta Version
               </span>
               <span className="flex items-center">
-                <span className="h-2 w-2 bg-blue-500 rounded-full mr-2"></span>
+                <span className="h-2 w-2 bg-cyan-500 rounded-full mr-2"></span>
                 Open Source
               </span>
               <span className="flex items-center">
-                <span className="h-2 w-2 bg-purple-500 rounded-full mr-2"></span>
+                <span className="h-2 w-2 bg-cyan-600 rounded-full mr-2"></span>
                 100% Free
               </span>
             </div>
@@ -157,7 +157,7 @@ export function Hero() {
             </div>
           </div>
           <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
-            <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
+            <p className="text-center text-sm font-semibold text-cyan-400 lg:text-left">
               Music streaming reimagined
             </p>
             <ul
