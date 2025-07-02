@@ -8,87 +8,87 @@ import { Container } from '@/components/Container'
 
 const reviews = [
   {
-    title: 'It really works.',
-    body: 'I downloaded Pocket today and turned $5000 into $25,000 in half an hour.',
-    author: 'CrazyInvestor',
+    title: 'Finally, truly free music streaming!',
+    body: 'I\'ve been using Spotify XM for months and haven\'t seen a single ad. The custom stations are amazing and it works perfectly with my car\'s Bluetooth.',
+    author: 'MusicLover2024',
     rating: 5,
   },
   {
-    title: 'You need this app.',
-    body: 'I didn’t understand the stock market at all before Pocket. I still don’t, but at least I’m rich now.',
-    author: 'CluelessButRich',
+    title: 'Open source music streaming done right.',
+    body: 'As a developer, I love that I can see exactly how Spotify XM works. No hidden algorithms, no data tracking, just pure music streaming.',
+    author: 'CodeAndBeats',
     rating: 5,
   },
   {
-    title: 'This shouldn’t be legal.',
-    body: 'Pocket makes it so easy to win big in the stock market that I can’t believe it’s actually legal.',
-    author: 'LivingDaDream',
+    title: 'Better than the paid services.',
+    body: 'Switched from a $10/month service to Spotify XM and honestly, the radio-style discovery is better than any algorithm I\'ve tried.',
+    author: 'FrugalMelody',
     rating: 5,
   },
   {
-    title: 'Screw financial advisors.',
-    body: 'I barely made any money investing in mutual funds. With Pocket, I’m doubling my net-worth every single month.',
-    author: 'JordanBelfort1962',
+    title: 'Perfect for my daily commute.',
+    body: 'The Bluetooth connectivity is seamless and the custom stations keep my 45-minute commute interesting every single day.',
+    author: 'CommuterTunes',
     rating: 5,
   },
   {
-    title: 'I love it!',
-    body: 'I started providing insider information myself and now I get new insider tips every 5 minutes. I don’t even have time to act on all of them. New Lamborghini is being delivered next week!',
-    author: 'MrBurns',
+    title: 'Contributing to open source music!',
+    body: 'I\'ve contributed code to Spotify XM and it\'s amazing to see how responsive the community is. This is the future of music streaming.',
+    author: 'OpenSourceFan',
     rating: 5,
   },
   {
-    title: 'Too good to be true.',
-    body: 'I was making money so fast with Pocket that it felt like a scam. But I sold my shares and withdrew the money and it’s really there, right in my bank account. This app is crazy!',
-    author: 'LazyRich99',
+    title: 'High quality audio for free.',
+    body: 'The 320kbps quality is crystal clear and rivals any premium service. Can\'t believe this is completely free.',
+    author: 'AudioPhile',
     rating: 5,
   },
   {
-    title: 'Wish I could give 6 stars',
-    body: 'This is literally the most important app you will ever download in your life. Get on this before it’s so popular that everyone else is getting these tips too.',
-    author: 'SarahLuvzCash',
+    title: 'Great for discovering new music.',
+    body: 'The radio-style playback has introduced me to so many new artists. Much better than repetitive playlists.',
+    author: 'DiscoveryQueen',
     rating: 5,
   },
   {
-    title: 'Bought an island.',
-    body: 'Yeah, you read that right. Want your own island too? Get Pocket.',
-    author: 'ScroogeMcduck',
+    title: 'Works everywhere.',
+    body: 'From my headphones to my smart speakers to my car - Spotify XM connects to everything seamlessly.',
+    author: 'TechNomad',
     rating: 5,
   },
   {
-    title: 'No more debt!',
-    body: 'After 2 weeks of trading on Pocket I was debt-free. Why did I even go to school at all when Pocket exists?',
-    author: 'BruceWayne',
+    title: 'No more subscription fatigue.',
+    body: 'After canceling multiple music subscriptions, finding Spotify XM was like finding a treasure. Free forever!',
+    author: 'BudgetBeats',
     rating: 5,
   },
   {
-    title: 'I’m 13 and I’m rich.',
-    body: 'I love that with Pocket’s transaction anonymization I could sign up and start trading when I was 12 years old. I had a million dollars before I had armpit hair!',
-    author: 'RichieRich',
+    title: 'Love the community aspect.',
+    body: 'Being able to contribute to an open-source music app and help shape its future is incredibly rewarding.',
+    author: 'CommunityBuilder',
     rating: 5,
   },
   {
-    title: 'Started an investment firm.',
-    body: 'I charge clients a 3% management fee and just throw all their investments into Pocket. Easy money!',
-    author: 'TheCountOfMonteChristo',
+    title: 'Student-friendly streaming.',
+    body: 'As a broke college student, Spotify XM is a lifesaver. High-quality music streaming without breaking the bank.',
+    author: 'CollegeLife',
     rating: 5,
   },
   {
-    title: 'It’s like a superpower.',
-    body: 'Every tip Pocket has sent me has paid off. It’s like playing Blackjack but knowing exactly what card is coming next!',
-    author: 'ClarkKent',
+    title: 'Perfect replacement for satellite radio.',
+    body: 'Cancelled my SiriusXM subscription and switched to Spotify XM. Better music discovery and it\'s completely free.',
+    author: 'FormerSatelliteUser',
     rating: 5,
   },
   {
-    title: 'Quit my job.',
-    body: 'I downloaded Pocket three days ago and quit my job today. I can’t believe no one else thought to build a stock trading app that works this way!',
-    author: 'GeorgeCostanza',
+    title: 'Transparent and trustworthy.',
+    body: 'No hidden fees, no data harvesting, no secret algorithms. Just honest, open-source music streaming.',
+    author: 'PrivacyAdvocate',
     rating: 5,
   },
   {
-    title: 'Don’t download this app',
-    body: 'Unless you want to have the best life ever! I am literally writing this from a yacht.',
-    author: 'JeffBezos',
+    title: 'Battery life is amazing.',
+    body: 'Unlike other streaming apps, Spotify XM doesn\'t drain my phone battery. Efficient coding shows.',
+    author: 'PowerUser',
     rating: 5,
   },
 ]
@@ -136,7 +136,7 @@ function Review({ title, body, author, rating, className, ...props }) {
     >
       <blockquote className="text-gray-900">
         <StarRating rating={rating} />
-        <p className="mt-4 text-lg/6 font-semibold before:content-['“'] after:content-['”']">
+        <p className="mt-4 text-lg/6 font-semibold before:content-['&quot;'] after:content-['&quot;']">
           {title}
         </p>
         <p className="mt-3 text-base/7">{body}</p>
@@ -258,10 +258,11 @@ export function Reviews() {
           id="reviews-title"
           className="text-3xl font-medium tracking-tight text-gray-900 sm:text-center"
         >
-          Everyone is changing their life with Pocket.
+          Music lovers are discovering Spotify XM.
         </h2>
         <p className="mt-2 text-lg text-gray-600 sm:text-center">
-          Thousands of people have doubled their net-worth in the last 30 days.
+          Thousands of people are enjoying free, unlimited music streaming 
+          with custom stations and Bluetooth connectivity.
         </p>
         <ReviewGrid />
       </Container>

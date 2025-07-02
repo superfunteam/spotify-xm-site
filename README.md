@@ -1,35 +1,56 @@
-# Pocket
+# Spotify XM
 
-Pocket is a [Tailwind Plus](https://tailwindcss.com/plus) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+🎵 **Free, Open-Source Radio Streaming App** 🎵
 
-## Getting started
+Spotify XM is a revolutionary radio-like streaming application that brings you unlimited music without the satellite subscription fees. Experience custom stations, seamless Bluetooth connectivity, and discover new music - all completely free.
 
-To get started with this template, first install the npm dependencies:
+## 🚀 Features
+
+- **Radio-Style Playback** - Continuous music streaming like traditional radio
+- **Custom Stations** - Create personalized stations based on your music taste
+- **Bluetooth Compatible** - Works seamlessly with all your Bluetooth devices
+- **No Subscription Fees** - Completely free to use, unlike satellite radio services
+- **Open Source** - Community-driven development and transparency
+- **Beta Experience** - Early access to cutting-edge features
+
+## 🎯 Getting Started
+
+To run the development server:
 
 ```bash
 npm install
-```
-
-Next, run the development server:
-
-```bash
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
-## Customizing
+## 🔗 Links
 
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+- **🌐 Live App**: [spotifyxm.superfun.games](https://spotifyxm.superfun.games)
+- **📁 GitHub Repository**: [github.com/your-username/spotify-xm](https://github.com/your-username/spotify-xm)
+- **🐛 Report Issues**: [GitHub Issues](https://github.com/your-username/spotify-xm/issues)
+- **💡 Feature Requests**: [GitHub Discussions](https://github.com/your-username/spotify-xm/discussions)
 
-## License
+## 🧑‍💻 Contributing
 
-This site template is a commercial product and is licensed under the [Tailwind Plus license](https://tailwindcss.com/plus/license).
+We welcome contributions! This is an open-source project and we'd love your help making it better.
 
-## Learn more
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-To learn more about the technologies used in this site template, see the following resources:
+## 📜 License
 
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+This project is open source and available under the [MIT License](LICENSE.md).
+
+## 🏗️ Built With
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animations
+
+---
+
+**Beta Version** - This app is currently in beta. Expect regular updates and new features!
