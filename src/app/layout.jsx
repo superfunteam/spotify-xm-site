@@ -11,11 +11,11 @@ const inter = Inter({
 
 export const metadata = {
   title: {
-    template: '%s - Pocket',
-    default: 'Pocket - Invest at the perfect time.',
+    template: '%s - Spotify XM',
+    default: 'Spotify XM - Free Radio Streaming App',
   },
   description:
-    'By leveraging insights from our network of industry insiders, you’ll know exactly when to buy to maximize profit, and exactly when to sell to avoid painful losses.',
+    'Experience unlimited radio-style music streaming with custom stations, Bluetooth connectivity, and no subscription fees. Free, open-source, and always improving.',
 }
 
 export default function RootLayout({ children }) {

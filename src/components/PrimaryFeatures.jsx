@@ -26,67 +26,64 @@ const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
   {
-    name: 'Invite friends for better returns',
+    name: 'Custom Radio Stations',
     description:
-      'For every friend you invite to Pocket, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
-    icon: DeviceUserIcon,
-    screen: InviteScreen,
+      'Create personalized radio stations based on your favorite artists, genres, or moods. Our algorithm learns your preferences and plays music you\'ll love.',
+    icon: DeviceRadioIcon,
+    screen: StationsScreen,
   },
   {
-    name: 'Notifications on stock dips',
+    name: 'Bluetooth Connectivity',
     description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
-    icon: DeviceNotificationIcon,
-    screen: StocksScreen,
+      'Seamlessly connect to any Bluetooth device - car stereos, headphones, speakers, and more. Your music follows you wherever you go.',
+    icon: DeviceBluetoothIcon,
+    screen: BluetoothScreen,
   },
   {
-    name: 'Invest what you want',
+    name: 'Free & Open Source',
     description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
-    icon: DeviceTouchIcon,
-    screen: InvestScreen,
+      'No subscription fees, no ads, no limitations. Completely free music streaming powered by open-source technology and community contributions.',
+    icon: DeviceFreeIcon,
+    screen: FreeScreen,
   },
 ]
 
-function DeviceUserIcon(props) {
+function DeviceRadioIcon(props) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M16 23a3 3 0 100-6 3 3 0 000 6zm-1 2a4 4 0 00-4 4v1a2 2 0 002 2h6a2 2 0 002-2v-1a4 4 0 00-4-4h-2z"
-        fill="#737373"
-      />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M5 4a4 4 0 014-4h14a4 4 0 014 4v24a4.002 4.002 0 01-3.01 3.877c-.535.136-.99-.325-.99-.877s.474-.98.959-1.244A2 2 0 0025 28V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 001.041 1.756C8.525 30.02 9 30.448 9 31s-.455 1.013-.99.877A4.002 4.002 0 015 28V4z"
         fill="#A3A3A3"
       />
+      <circle cx={16} cy={16} r={6} fill="#06B6D4" />
+      <circle cx={16} cy={16} r={3} fill="#737373" />
+      <path d="M12 12l8 8M20 12l-8 8" stroke="#737373" strokeWidth={1} />
     </svg>
   )
 }
 
-function DeviceNotificationIcon(props) {
+function DeviceBluetoothIcon(props) {
   return (
     <svg viewBox="0 0 32 32" aria-hidden="true" {...props}>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M9 0a4 4 0 00-4 4v24a4 4 0 004 4h14a4 4 0 004-4V4a4 4 0 00-4-4H9zm0 2a2 2 0 00-2 2v24a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9z"
+        d="M5 4a4 4 0 014-4h14a4 4 0 014 4v24a4.002 4.002 0 01-3.01 3.877c-.535.136-.99-.325-.99-.877s.474-.98.959-1.244A2 2 0 0025 28V4a2 2 0 00-2-2h-1.382a1 1 0 00-.894.553l-.448.894a1 1 0 01-.894.553h-6.764a1 1 0 01-.894-.553l-.448-.894A1 1 0 0010.382 2H9a2 2 0 00-2 2v24a2 2 0 001.041 1.756C8.525 30.02 9 30.448 9 31s-.455 1.013-.99.877A4.002 4.002 0 015 28V4z"
         fill="#A3A3A3"
       />
       <path
-        d="M9 8a2 2 0 012-2h10a2 2 0 012 2v2a2 2 0 01-2 2H11a2 2 0 01-2-2V8z"
-        fill="#737373"
+        d="M15 8v5.293l2.293-2.293a1 1 0 011.414 1.414L17.414 14l1.293 1.293a1 1 0 01-1.414 1.414L15 14.414V20l3.293-3.293a1 1 0 011.414 1.414L17.414 20l1.293 1.293a1 1 0 01-1.414 1.414L15 20.414V24h.586l4.707-4.707a1 1 0 011.414 1.414L17 25.414l4.707 4.707a1 1 0 01-1.414 1.414L15.586 26H15V8z"
+        fill="#06B6D4"
       />
     </svg>
   )
 }
 
-function DeviceTouchIcon(props) {
+function DeviceFreeIcon(props) {
   let id = useId()
 
   return (
@@ -100,8 +97,8 @@ function DeviceTouchIcon(props) {
           y2={17}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#737373" />
-          <stop offset={1} stopColor="#D4D4D4" stopOpacity={0} />
+          <stop stopColor="#06B6D4" />
+          <stop offset={1} stopColor="#06B6D4" stopOpacity={0} />
         </linearGradient>
       </defs>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -112,16 +109,14 @@ function DeviceTouchIcon(props) {
         fill="#A3A3A3"
       />
       <path
-        d="M7 22c0-4.694 3.5-8 8-8"
-        stroke={`url(#${id}-gradient)`}
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M16 8a8 8 0 100 16 8 8 0 000-16z"
+        fill="#16A34A"
       />
       <path
-        d="M21 20l.217-5.513a1.431 1.431 0 00-2.85-.226L17.5 21.5l-1.51-1.51a2.107 2.107 0 00-2.98 0 .024.024 0 00-.005.024l3.083 9.25A4 4 0 0019.883 32H25a4 4 0 004-4v-5a3 3 0 00-3-3h-5z"
-        fill="#A3A3A3"
+        d="M14 12h4v2h-2v6h-2v-8z"
+        fill="white"
       />
+      <circle cx={15} cy={10} r={1} fill="white" />
     </svg>
   )
 }
@@ -172,35 +167,46 @@ const bodyAnimation = {
   },
 }
 
-function InviteScreen(props) {
+function StationsScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
+        <AppScreen.Title>My Stations</AppScreen.Title>
         <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
+          <span className="text-white">5 custom stations</span> created
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
         <div className="px-4 py-6">
-          <div className="space-y-6">
+          <div className="space-y-4">
             {[
-              { label: 'Full name', value: 'Albert H. Wiggin' },
-              { label: 'Email address', value: 'awiggin@chase.com' },
-            ].map((field) => (
-              <div key={field.label}>
-                <div className="text-sm text-gray-500">{field.label}</div>
-                <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
-                  {field.value}
+              { name: 'Chill Vibes', genre: 'Lo-fi Hip Hop', songs: '142 songs' },
+              { name: 'Rock Classics', genre: 'Classic Rock', songs: '89 songs' },
+              { name: 'Electronic Mix', genre: 'Electronic', songs: '203 songs' },
+              { name: 'Jazz Café', genre: 'Smooth Jazz', songs: '67 songs' },
+            ].map((station) => (
+              <div key={station.name} className="flex items-center space-x-3 rounded-lg bg-gray-50 p-3">
+                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
+                  <svg className="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM15.657 6.343a1 1 0 011.414 0A9.972 9.972 0 0119 12a9.972 9.972 0 01-1.929 5.657 1 1 0 11-1.414-1.414A7.971 7.971 0 0017 12a7.971 7.971 0 00-1.343-4.243 1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </div>
+                <div className="flex-1">
+                  <h3 className="text-sm font-medium text-gray-900">{station.name}</h3>
+                  <p className="text-xs text-gray-500">{station.genre} • {station.songs}</p>
+                </div>
+                <button className="rounded-full bg-cyan-500 p-2 text-white">
+                  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                  </svg>
+                </button>
               </div>
             ))}
           </div>
           <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
-            Invite person
+            Create New Station
           </div>
         </div>
       </MotionAppScreenBody>
@@ -208,12 +214,12 @@ function InviteScreen(props) {
   )
 }
 
-function StocksScreen(props) {
+function BluetoothScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
+        <AppScreen.Title>Bluetooth Devices</AppScreen.Title>
+        <AppScreen.Subtitle>Connected devices</AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
@@ -221,86 +227,57 @@ function StocksScreen(props) {
         <div className="divide-y divide-gray-100">
           {[
             {
-              name: 'Laravel',
-              price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
-              logo: LaravelLogo,
+              name: 'Car Audio',
+              status: 'Connected',
+              type: 'Car Stereo',
+              battery: null,
+              connected: true,
             },
             {
-              name: 'Tuple',
-              price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
-              logo: TupleLogo,
+              name: 'AirPods Pro',
+              status: 'Connected',
+              type: 'Headphones',
+              battery: '85%',
+              connected: true,
             },
             {
-              name: 'Transistor',
-              price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
-              logo: TransistorLogo,
+              name: 'JBL Flip 5',
+              status: 'Available',
+              type: 'Speaker',
+              battery: null,
+              connected: false,
             },
             {
-              name: 'Diageo',
-              price: '250.65',
-              change: '+1.25%',
-              color: '#3320A7',
-              logo: DiageoLogo,
+              name: 'Sony WH-1000XM4',
+              status: 'Available',
+              type: 'Headphones',
+              battery: '92%',
+              connected: false,
             },
-            {
-              name: 'StaticKit',
-              price: '250.65',
-              change: '-3.38%',
-              color: '#2A3034',
-              logo: StaticKitLogo,
-            },
-            {
-              name: 'Statamic',
-              price: '5,040.85',
-              change: '-3.11%',
-              color: '#0EA5E9',
-              logo: StatamicLogo,
-            },
-            {
-              name: 'Mirage',
-              price: '140.44',
-              change: '+9.09%',
-              color: '#16A34A',
-              logo: MirageLogo,
-            },
-            {
-              name: 'Reversable',
-              price: '550.60',
-              change: '-1.25%',
-              color: '#8D8D8D',
-              logo: ReversableLogo,
-            },
-          ].map((stock) => (
-            <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
-              <div
-                className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
-              >
-                <stock.logo className="h-10 w-10" />
+          ].map((device) => (
+            <div key={device.name} className="flex items-center gap-4 px-4 py-3">
+              <div className={clsx(
+                'flex-none rounded-full p-2',
+                device.connected ? 'bg-green-100' : 'bg-gray-100'
+              )}>
+                <svg className={clsx('h-6 w-6', device.connected ? 'text-green-600' : 'text-gray-600')} fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2L6 6h3v8h2V6h3l-4-4zM4 16h12v2H4v-2z"/>
+                </svg>
               </div>
-              <div className="flex-auto text-sm text-gray-900">
-                {stock.name}
+              <div className="flex-auto text-sm">
+                <div className="font-medium text-gray-900">{device.name}</div>
+                <div className="text-gray-500">{device.type}</div>
               </div>
               <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
+                <div className={clsx(
+                  'text-xs font-medium',
+                  device.connected ? 'text-green-600' : 'text-gray-500'
+                )}>
+                  {device.status}
                 </div>
-                <div
-                  className={clsx(
-                    'text-xs/5',
-                    stock.change.startsWith('+')
-                      ? 'text-cyan-500'
-                      : 'text-gray-500',
-                  )}
-                >
-                  {stock.change}
-                </div>
+                {device.battery && (
+                  <div className="text-xs text-gray-400">{device.battery}</div>
+                )}
               </div>
             </div>
           ))}
@@ -310,13 +287,13 @@ function StocksScreen(props) {
   )
 }
 
-function InvestScreen(props) {
+function FreeScreen(props) {
   return (
     <AppScreen className="w-full">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
+        <AppScreen.Title>Open Source</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
+          <span className="text-white">100% Free</span> Forever
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -325,25 +302,11 @@ function InvestScreen(props) {
         <div className="px-4 py-6">
           <div className="space-y-4">
             {[
-              { label: 'Number of shares', value: '100' },
-              {
-                label: 'Current market price',
-                value: (
-                  <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                ),
-              },
-              { label: 'Estimated cost', value: '$3,428.00' },
+              { label: 'Monthly cost', value: '$0.00' },
+              { label: 'Advertisement count', value: '0 ads' },
+              { label: 'Song skip limit', value: 'Unlimited' },
+              { label: 'Offline downloads', value: 'Coming soon' },
+              { label: 'Sound quality', value: 'High (320kbps)' },
             ].map((item) => (
               <div
                 key={item.label}
@@ -355,8 +318,16 @@ function InvestScreen(props) {
                 </div>
               </div>
             ))}
-            <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
-              Buy shares
+            <div className="mt-6 space-y-3">
+              <div className="rounded-lg bg-green-500 px-3 py-2 text-center text-sm font-semibold text-white">
+                ✓ Free Forever
+              </div>
+              <a 
+                href="https://github.com/your-username/spotify-xm"
+                className="block rounded-lg border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-gray-900 hover:bg-gray-50"
+              >
+                View Source Code
+              </a>
             </div>
           </div>
         </div>
@@ -553,19 +524,18 @@ export function PrimaryFeatures() {
   return (
     <section
       id="features"
-      aria-label="Features for investing all your money"
+      aria-label="Features for music streaming"
       className="bg-gray-900 py-20 sm:py-32"
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
           <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
+            Every feature you need for free music streaming.
           </h2>
           <p className="mt-2 text-lg text-gray-400">
-            Pocket was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Pocket has
-            it.
+            Spotify XM was built for music lovers who want unlimited streaming 
+            without the cost. Experience radio-style playback, custom stations, 
+            and seamless connectivity - all powered by open-source technology.
           </p>
         </div>
       </Container>

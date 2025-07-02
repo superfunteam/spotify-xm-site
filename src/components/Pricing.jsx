@@ -10,61 +10,68 @@ import { Logomark } from '@/components/Logo'
 
 const plans = [
   {
-    name: 'Starter',
-    featured: false,
+    name: 'Free Forever',
+    featured: true,
     price: { Monthly: '$0', Annually: '$0' },
     description:
-      'You’re new to investing but want to do it right. Get started for free.',
+      'Everything you need for unlimited music streaming. No ads, no limits, no subscription fees.',
     button: {
-      label: 'Get started for free',
-      href: '/register',
+      label: 'Download for free',
+      href: '#',
     },
     features: [
-      'Commission-free trading',
-      'Multi-layered encryption',
-      'One tip every day',
-      'Invest up to $1,500 each month',
-    ],
-    logomarkClassName: 'fill-gray-300',
-  },
-  {
-    name: 'Investor',
-    featured: false,
-    price: { Monthly: '$7', Annually: '$70' },
-    description:
-      'You’ve been investing for a while. Invest more and grow your wealth faster.',
-    button: {
-      label: 'Subscribe',
-      href: '/register',
-    },
-    features: [
-      'Commission-free trading',
-      'Multi-layered encryption',
-      'One tip every hour',
-      'Invest up to $15,000 each month',
-      'Basic transaction anonymization',
-    ],
-    logomarkClassName: 'fill-gray-500',
-  },
-  {
-    name: 'VIP',
-    featured: true,
-    price: { Monthly: '$199', Annually: '$1,990' },
-    description:
-      'You’ve got a huge amount of assets but it’s not enough. To the moon.',
-    button: {
-      label: 'Subscribe',
-      href: '/register',
-    },
-    features: [
-      'Commission-free trading',
-      'Multi-layered encryption',
-      'Real-time tip notifications',
-      'No investment limits',
-      'Advanced transaction anonymization',
-      'Automated tax-loss harvesting',
+      'Unlimited music streaming',
+      'Custom radio stations',
+      'Bluetooth connectivity',
+      'High-quality audio (320kbps)',
+      'No advertisements',
+      'Open source code',
+      'Community support',
+      'Regular updates',
     ],
     logomarkClassName: 'fill-cyan-500',
+  },
+  {
+    name: 'Contribute',
+    featured: false,
+    price: { Monthly: 'Voluntary', Annually: 'Voluntary' },
+    description:
+      'Help support development and server costs with voluntary contributions. Same features, just helping the community.',
+    button: {
+      label: 'Support the project',
+      href: 'https://github.com/your-username/spotify-xm',
+    },
+    features: [
+      'All free features included',
+      'Support open source development',
+      'Help cover server costs',
+      'Priority feature requests',
+      'Special contributor badge',
+      'Early beta access',
+      'Direct developer contact',
+    ],
+    logomarkClassName: 'fill-green-500',
+  },
+  {
+    name: 'Developer',
+    featured: false,
+    price: { Monthly: 'Open Source', Annually: 'Open Source' },
+    description:
+      'Want to contribute code? Join our open-source community and help build the future of free music streaming.',
+    button: {
+      label: 'View on GitHub',
+      href: 'https://github.com/your-username/spotify-xm',
+    },
+    features: [
+      'Full source code access',
+      'Development documentation',
+      'Contribution guidelines',
+      'Code review process',
+      'Developer community Discord',
+      'Technical support',
+      'Feature development roadmap',
+    ],
+    logomarkClassName: 'fill-gray-500',
   },
 ]
 
@@ -206,58 +213,12 @@ export function Pricing() {
             id="pricing-title"
             className="text-3xl font-medium tracking-tight text-gray-900"
           >
-            Flat pricing, no management fees.
+            Free music streaming, always.
           </h2>
           <p className="mt-2 text-lg text-gray-600">
-            Whether you’re one person trying to get ahead or a big firm trying
-            to take over the world, we’ve got a plan for you.
+            No subscription fees, no ads, no limitations. Choose how you want 
+            to support the open-source music streaming revolution.
           </p>
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <div className="relative">
-            <RadioGroup
-              value={activePeriod}
-              onChange={setActivePeriod}
-              className="grid grid-cols-2"
-            >
-              {['Monthly', 'Annually'].map((period) => (
-                <Radio
-                  key={period}
-                  value={period}
-                  className={clsx(
-                    'cursor-pointer border border-gray-300 px-[calc(--spacing(3)-1px)] py-[calc(--spacing(2)-1px)] text-sm text-gray-700 transition-colors hover:border-gray-400 data-focus:outline-2 data-focus:outline-offset-2',
-                    period === 'Monthly'
-                      ? 'rounded-l-lg'
-                      : '-ml-px rounded-r-lg',
-                  )}
-                >
-                  {period}
-                </Radio>
-              ))}
-            </RadioGroup>
-            <div
-              aria-hidden="true"
-              className={clsx(
-                'pointer-events-none absolute inset-0 z-10 grid grid-cols-2 overflow-hidden rounded-lg bg-cyan-500 transition-all duration-300',
-                activePeriod === 'Monthly'
-                  ? '[clip-path:inset(0_50%_0_0)]'
-                  : '[clip-path:inset(0_0_0_calc(50%-1px))]',
-              )}
-            >
-              {['Monthly', 'Annually'].map((period) => (
-                <div
-                  key={period}
-                  className={clsx(
-                    'py-2 text-center text-sm font-semibold text-white',
-                    period === 'Annually' && '-ml-px',
-                  )}
-                >
-                  {period}
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3">
