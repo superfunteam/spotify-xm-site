@@ -97,8 +97,8 @@ function DeviceFreeIcon(props) {
           y2={17}
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#06B6D4" />
-          <stop offset={1} stopColor="#06B6D4" stopOpacity={0} />
+                        <stop stopColor="#39ff14" />
+              <stop offset={1} stopColor="#39ff14" stopOpacity={0} />
         </linearGradient>
       </defs>
       <circle cx={16} cy={16} r={16} fill="#A3A3A3" fillOpacity={0.2} />
@@ -173,7 +173,7 @@ function StationsScreen(props) {
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
         <AppScreen.Title>My Stations</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white">5 custom stations</span> created
+                      <span className="text-cyan-400">5 custom stations</span> created
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -187,9 +187,9 @@ function StationsScreen(props) {
               { name: 'Electronic Mix', genre: 'Electronic', songs: '203 songs' },
               { name: 'Jazz Café', genre: 'Smooth Jazz', songs: '67 songs' },
             ].map((station) => (
-              <div key={station.name} className="flex items-center space-x-3 rounded-lg bg-gray-50 p-3">
+                              <div key={station.name} className="flex items-center space-x-3 rounded-lg bg-gray-800 p-3">
                 <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
-                  <svg className="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="h-6 w-6 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM15.657 6.343a1 1 0 011.414 0A9.972 9.972 0 0119 12a9.972 9.972 0 01-1.929 5.657 1 1 0 11-1.414-1.414A7.971 7.971 0 0017 12a7.971 7.971 0 00-1.343-4.243 1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -197,7 +197,7 @@ function StationsScreen(props) {
                   <h3 className="text-sm font-medium text-gray-900">{station.name}</h3>
                   <p className="text-xs text-gray-500">{station.genre} • {station.songs}</p>
                 </div>
-                <button className="rounded-full bg-cyan-500 p-2 text-white">
+                <button className="rounded-full bg-cyan-500 p-2 text-gray-950">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                   </svg>
@@ -205,7 +205,7 @@ function StationsScreen(props) {
               </div>
             ))}
           </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-white">
+          <div className="mt-6 rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-gray-950">
             Create New Station
           </div>
         </div>
@@ -224,7 +224,7 @@ function BluetoothScreen(props) {
       <MotionAppScreenBody
         {...(props.animated ? { ...bodyAnimation, custom: props.custom } : {})}
       >
-        <div className="divide-y divide-gray-100">
+                    <div className="divide-y divide-gray-700">
           {[
             {
               name: 'Car Audio',
@@ -258,9 +258,9 @@ function BluetoothScreen(props) {
             <div key={device.name} className="flex items-center gap-4 px-4 py-3">
               <div className={clsx(
                 'flex-none rounded-full p-2',
-                device.connected ? 'bg-green-100' : 'bg-gray-100'
+                                  device.connected ? 'bg-gray-800' : 'bg-gray-900'
               )}>
-                <svg className={clsx('h-6 w-6', device.connected ? 'text-green-600' : 'text-gray-600')} fill="currentColor" viewBox="0 0 20 20">
+                <svg className={clsx('h-6 w-6', device.connected ? 'text-cyan-400' : 'text-gray-600')} fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 2L6 6h3v8h2V6h3l-4-4zM4 16h12v2H4v-2z"/>
                 </svg>
               </div>
@@ -293,7 +293,7 @@ function FreeScreen(props) {
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
         <AppScreen.Title>Open Source</AppScreen.Title>
         <AppScreen.Subtitle>
-          <span className="text-white">100% Free</span> Forever
+                      <span className="text-cyan-400">100% Free</span> Forever
         </AppScreen.Subtitle>
       </MotionAppScreenHeader>
       <MotionAppScreenBody
@@ -319,12 +319,12 @@ function FreeScreen(props) {
               </div>
             ))}
             <div className="mt-6 space-y-3">
-              <div className="rounded-lg bg-green-500 px-3 py-2 text-center text-sm font-semibold text-white">
+              <div className="rounded-lg bg-cyan-500 px-3 py-2 text-center text-sm font-semibold text-gray-950">
                 ✓ Free Forever
               </div>
               <a 
                 href="https://github.com/your-username/spotify-xm"
-                className="block rounded-lg border border-gray-300 px-3 py-2 text-center text-sm font-semibold text-gray-900 hover:bg-gray-50"
+                                  className="block rounded-lg border border-gray-700 px-3 py-2 text-center text-sm font-semibold text-cyan-400 hover:bg-gray-800"
               >
                 View Source Code
               </a>
@@ -372,7 +372,7 @@ function FeaturesDesktop() {
         {features.map((feature, featureIndex) => (
           <div
             key={feature.name}
-            className="relative rounded-2xl transition-colors hover:bg-gray-800/30"
+                          className="relative rounded-2xl transition-colors hover:bg-gray-700/50"
           >
             {featureIndex === selectedIndex && (
               <motion.div
@@ -383,7 +383,7 @@ function FeaturesDesktop() {
             )}
             <div className="relative z-10 p-8">
               <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 text-lg font-semibold text-white">
+              <h3 className="mt-6 text-lg font-semibold text-cyan-400">
                 <Tab className="text-left data-selected:not-data-focus:outline-hidden">
                   <span className="absolute inset-0 rounded-2xl" />
                   {feature.name}
@@ -398,7 +398,7 @@ function FeaturesDesktop() {
       </TabList>
       <div className="relative col-span-6">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <CircleBackground color="#13B5C8" className="animate-spin-slower" />
+                              <CircleBackground color="#39ff14" className="animate-spin-slower" />
         </div>
         <PhoneFrame className="z-10 mx-auto w-full max-w-[366px]">
           <TabPanels as={Fragment}>
@@ -475,7 +475,7 @@ function FeaturesMobile() {
             <div className="relative transform overflow-hidden rounded-2xl bg-gray-800 px-5 py-6">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <CircleBackground
-                  color="#13B5C8"
+                  color="#39ff14"
                   className={featureIndex % 2 === 1 ? 'rotate-180' : undefined}
                 />
               </div>
@@ -484,7 +484,7 @@ function FeaturesMobile() {
               </PhoneFrame>
               <div className="absolute inset-x-0 bottom-0 bg-gray-800/95 p-6 backdrop-blur-sm sm:p-10">
                 <feature.icon className="h-8 w-8" />
-                <h3 className="mt-6 text-sm font-semibold text-white sm:text-lg">
+                                  <h3 className="mt-6 text-sm font-semibold text-cyan-400 sm:text-lg">
                   {feature.name}
                 </h3>
                 <p className="mt-2 text-sm text-gray-400">
@@ -502,7 +502,7 @@ function FeaturesMobile() {
             key={featureIndex}
             className={clsx(
               'relative h-0.5 w-4 rounded-full',
-              featureIndex === activeIndex ? 'bg-gray-300' : 'bg-gray-500',
+                                    featureIndex === activeIndex ? 'bg-cyan-400' : 'bg-gray-600',
             )}
             aria-label={`Go to slide ${featureIndex + 1}`}
             onClick={() => {
@@ -529,7 +529,7 @@ export function PrimaryFeatures() {
     >
       <Container>
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-medium tracking-tight text-white">
+          <h2 className="text-3xl font-medium tracking-tight text-cyan-400">
             Every feature you need for free music streaming.
           </h2>
           <p className="mt-2 text-lg text-gray-400">
